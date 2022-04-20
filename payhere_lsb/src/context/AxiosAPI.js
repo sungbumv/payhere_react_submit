@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function AxiosAPI()
+function AxiosAPI(props)
 {
     var [loading, setLoading] = useState(false);
     var [stateError, setStateError] = useState(null);
@@ -11,7 +11,8 @@ function AxiosAPI()
         try {
             setStateError(null);
             setLoading(true);        
-            const response = await axios.get('https://api.github.com/repos/sungbumv/payhere_rest');
+            const apiUrl = 'https://api.github.com/repos/sungbumv/' + props.inputRepo;
+            const response = await axios.get(apiUrl);
             setResponseData(response.data);
         }
         catch(e){
@@ -40,7 +41,7 @@ function AxiosAPI()
 
     return (
         <>
-	    <h3>
+	    { <h3>
 	      {responseData.id} 
           <hr/>
           {responseData.node_id}
@@ -50,7 +51,7 @@ function AxiosAPI()
           {responseData.full_name}
           <hr/>
           {responseData.private}
-	    </h3>
+	    </h3> }
 			
 			<button onClick={ fetch }>다시 불러오기</button>
 		</>
