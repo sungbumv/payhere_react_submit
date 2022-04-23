@@ -31,11 +31,7 @@ function MainFunction() {
     function searchApi() {
       const apiUrl = "https://api.github.com/repos/sungbumv/";
       axios
-        .get(apiUrl + inputData, {
-          headers: {
-            Authorization: "token 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", // github api 초과로 인한 access token 발급
-          },
-        })
+        .get(apiUrl + inputData)
         .then(function (response) {
           //정상
             //1. 성공하더라도 로컬 스토리지에 같은 item이 있다면 추가하지 않음 
