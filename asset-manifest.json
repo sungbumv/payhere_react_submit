@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/payhere_react_submit/static/css/main.328211ad.css",
-    "main.js": "/payhere_react_submit/static/js/main.dae99fcf.js",
+    "main.js": "/payhere_react_submit/static/js/main.910940b6.js",
     "index.html": "/payhere_react_submit/index.html",
     "main.328211ad.css.map": "/payhere_react_submit/static/css/main.328211ad.css.map",
-    "main.dae99fcf.js.map": "/payhere_react_submit/static/js/main.dae99fcf.js.map"
+    "main.910940b6.js.map": "/payhere_react_submit/static/js/main.910940b6.js.map"
   },
   "entrypoints": [
     "static/css/main.328211ad.css",
-    "static/js/main.dae99fcf.js"
+    "static/js/main.910940b6.js"
   ]
 }
