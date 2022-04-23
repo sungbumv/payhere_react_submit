@@ -33,7 +33,7 @@ function MainFunction() {
       axios
         .get(apiUrl + inputData, {
           headers: {
-            Authorization: "token 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", // github api 초과로 인한 access token 발급
+            Authorization: "token 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", // github api 초과로 인한 access token 발급
           },
         })
         .then(function (response) {
