@@ -11,6 +11,8 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import axios from "axios";
 import Detail from "./Detail";
+import "./Home.css";
+
 class Home extends Component {
     render()
     {
@@ -29,7 +31,7 @@ function MainFunction() {
     let [resultRepo, setResultRepo] = useState([]);
     // 통신 메서드
     function searchApi() {
-      const apiUrl = "https://api.github.com/repos/sungbumv/";
+      const apiUrl = "https://api.github.com/repos/";
       axios
         .get(apiUrl + inputData)
         .then(function (response) {
@@ -54,18 +56,20 @@ function MainFunction() {
         <Header />
         <div>
           <h3>{inputData}</h3>
-          <input
+          <div>
+          <input className="search-input" 
+          placeholder="OwnerID/Repository Name을 입력해주세요"
             onChange={(e) => {
               inputDataChange(e.target.value);
             }}
           />
-          <button
-            onClick={() => {
+          <button className="search-btn"
+          onClick={() => {
               searchApi();
-            }}
-          >
-            버튼 입력
-          </button>
+            }}>조회</button>
+          </div>
+         
+          
         </div>
         <ContentFloor resultRepo={resultRepo} setResultRepo={setResultRepo}/>
         <Footer />
