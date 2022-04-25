@@ -39,12 +39,6 @@
 <br>
 <br>
 
-
-
-## 🖨 배포링크
-- 링크 : https://sungbumv.github.io/payhere_react_submit 
-<br>
-
 <br>
 <br>
 
